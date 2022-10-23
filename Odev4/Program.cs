@@ -32,16 +32,27 @@
                         Console.WriteLine("Hoşgeldiniz");
                         break;
                     }
-                    Console.WriteLine("Yanlış kullanıcı adı veya şifre girdiniz.");
-                    deneme++;
-                    Console.Write("Kalan hakkınız ");
-                    Console.WriteLine(DENEME_HAKKI - deneme);
 
+                    else if (deneme >= 2)
+                    {
+                        Console.WriteLine("Şifreniz Bloke Oldu");
+                        break;
+                    }
+
+                    {
+                        Console.WriteLine("Yanlış kullanıcı adı veya şifre girdiniz.");
+                        deneme++;
+                        Console.Write("Kalan hakkınız ");
+                        Console.WriteLine(DENEME_HAKKI - deneme);
+
+                        Console.ReadKey();
+                    }
 
                 }
-                Console.ReadKey();
             }
- }     }    }
+        }
+    }
+}
 
 
 
